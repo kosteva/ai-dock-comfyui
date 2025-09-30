@@ -81,7 +81,7 @@ jobs:
                 # GHCR.io Tags
                 TAGS="${img_path_ghcr}:${base_tag}-${COMFYUI_BUILD_REF}, ${img_path_ghcr}:${base_tag}, ${img_path_ghcr}:latest, ${img_path_ghcr}:latest-cuda"
             else
-                TAGS="${img_path_ghcr}:${base_tag}-${COMFYUI_BUILD_REF}}"
+                TAGS="${img_path_ghcr}:${base_tag}-${COMFYUI_BUILD_REF}"
             fi
           echo "TAGS=${TAGS}" >> ${GITHUB_ENV}
       -
