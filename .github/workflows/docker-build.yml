@@ -19,6 +19,7 @@ jobs:
           - false
         comfyui:
           - v0.2.7
+          # - v0.3.60
         python:
           - "3.10"
           # - 3.11
@@ -74,7 +75,7 @@ jobs:
           [ -z "$COMFYUI_BUILD_REF" ] && { echo "Error: COMFYUI_BUILD_REF is empty. Exiting script." >&2; exit 1; }
           echo "COMFYUI_BUILD_REF=${COMFYUI_BUILD_REF}" >> ${GITHUB_ENV}
 
-          base_tag="v2-cuda-${{   matrix.cuda }}-${{ env.UBUNTU_VERSION }}"
+          base_tag="${{ matrix.python }}-v2-cuda-${{ matrix.cuda }}-${{ env.UBUNTU_VERSION }}"
 
           if [[ ${{   matrix.latest }} == "true" ]]; then
                 echo "Marking latest"
