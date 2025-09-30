@@ -18,8 +18,8 @@ jobs:
         latest:
           - false
         comfyui:
-          - v0.2.7
-          # - v0.3.60
+          # - v0.2.7
+          - v0.3.60
         python:
           - "3.10"
           # - 3.11
